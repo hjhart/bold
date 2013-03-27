@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Bold::VERSION
   spec.authors       = ["Abhi Hiremagalur"]
   spec.email         = ["abhijit@hiremaga.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Bold objects say they need and collaborate with trust}
+  spec.summary       = %q{Bold objects say they need and collaborate with trust}
+  spec.homepage      = "http://github.com/hiremaga/bold"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
