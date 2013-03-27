@@ -1,6 +1,6 @@
 # Bold
 
-Bold objects say they need and collaborate with trust
+Bold objects say what they need and collaborate with trust
 
 ## Installation
 
