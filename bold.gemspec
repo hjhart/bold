@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Bold::VERSION
   spec.authors       = ["Abhi Hiremagalur"]
   spec.email         = ["abhijit@hiremaga.com"]
-  spec.description   = %q{Bold objects say they need and collaborate with trust}
-  spec.summary       = %q{Bold objects say they need and collaborate with trust}
+  spec.description   = %q{Bold objects say what they need and collaborate with trust}
+  spec.summary       = %q{Bold objects say what they need and collaborate with trust}
   spec.homepage      = "http://github.com/hiremaga/bold"
   spec.license       = "MIT"
 
