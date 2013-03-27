@@ -7,19 +7,22 @@ module Bold
     klass.extend(ClassMethods)
   end
 
-  def self.supplies(dep, &supplier)
-    @suppliers[dep] = supplier
+  def self.supplies(need, &supplier)
+    @suppliers[need] = supplier
   end
 
-  def self.supply(dep)
-    @suppliers[dep].call
+  def self.supply(need)
+    @suppliers[need].call
+  end
+
+  def initialize(attributes={})
+    @supplies = attributes.delete(:supplies) || {}
   end
 
   module ClassMethods
-    def needs(dep)
-      define_method(dep) do
-        @deps ||= {}
-        @deps[dep] ||= Bold.supply(dep)
+    def needs(need)
+      define_method(need) do
+        @supplies[need] ||= Bold.supply(need)
       end
     end
   end
