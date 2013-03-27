@@ -1,6 +1,6 @@
 # Bold
 
-TODO: Write a gem description
+Bold objects say they need and collaborate with trust
 
 ## Installation
 
