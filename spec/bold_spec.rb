@@ -9,12 +9,6 @@ describe Bold do
     include Bold
 
     needs :piano
-    attr_reader :attributes
-
-    def initialize(attributes={})
-      super
-      @attributes = attributes
-    end
   end
 
   subject do
@@ -23,11 +17,23 @@ describe Bold do
 
   its(:piano) { should be_a(Piano) }
 
-  context "when it is supplied Bach's lautenwerck" do
-    let(:lautenwerck) { double }
+  context "when supplied Bach's lautenwerck" do
+    class Smith < Bold::Base
+      needs :piano
+      attr_reader :attributes
+
+      attr_reader :attributes
+
+      def initialize(attributes={})
+        super
+        @attributes = attributes
+      end
+    end
+
+    let(:lautenwerck) { "Bach's lautenwerck" }
 
     subject do
-      Bob.new(supplies: {
+      Smith.new(supplies: {
         piano: lautenwerck
       })
     end

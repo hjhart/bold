@@ -1,6 +1,8 @@
 require "bold/version"
 
 module Bold
+  autoload :Base, 'bold/base'
+
   @suppliers = {}
 
   def self.included(klass)
@@ -15,13 +17,11 @@ module Bold
     @suppliers[need].call
   end
 
-  def initialize(attributes={})
-    @supplies = attributes.delete(:supplies) || {}
-  end
-
   module ClassMethods
     def needs(need)
+
       define_method(need) do
+        @supplies ||= {}
         @supplies[need] ||= Bold.supply(need)
       end
     end
